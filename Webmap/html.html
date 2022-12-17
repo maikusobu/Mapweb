@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="shortcut icon" type="image/png" href="w (2).png" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+      integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+      crossorigin=""
+    />
+    <script
+      defer
+      src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+      integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+      crossorigin=""
+    ></script>
+
+    <script defer src="script.js"></script>
+    <title>WIBU site</title>
+  </head>
+  <body>
+    <div class="sidebar modern">
+      <img src="w (200 × 200 px) (100 × 100 px).png" alt="Logo" class="logo" />
+
+      <ul class="workouts" id="container--workout--first">
+        <form class="form hidden">
+          <div class="form__row">
+            <label class="form__label">Thể loại</label>
+            <select class="form__input form__input--type">
+              <option value="running">Chạy Bộ</option>
+              <option value="cycling">Đạp Xe</option>
+            </select>
+          </div>
+          <div class="form__row">
+            <label class="form__label">Khoảng cách</label>
+            <input class="form__input form__input--distance" placeholder="km" />
+          </div>
+          <div class="form__row">
+            <label class="form__label">Thời gian</label>
+            <input
+              class="form__input form__input--duration"
+              placeholder="min"
+            />
+          </div>
+          <div class="form__row">
+            <label class="form__label">Guồng chân</label>
+            <input
+              class="form__input form__input--cadence"
+              placeholder="step/min"
+            />
+          </div>
+          <div class="form__row form__row--hidden">
+            <label class="form__label">Độ nhảy đạt</label>
+            <input
+              class="form__input form__input--elevation"
+              placeholder="meters"
+            />
+          </div>
+          <button class="form__btn">OK</button>
+        </form>
+      </ul>
+      <div class="btn--container">
+        <button class="delete btn">Xóa toàn bộ</button>
+        <button class="delete--item btn">Xóa từng cái</button>
+      </div>
+      <div class="btn--container">
+        <div class="container--btn-change">
+          <button class="sort--btn btn">Sắp xếp (km)</button>
+          <div class="container--selection">
+            <select class="select--option">
+              <option>Tăng dần</option>
+              <option>Giảm dần</option>
+            </select>
+          </div>
+        </div>
+        <button class="sortby--btn btn">Trả vị trí cũ</button>
+      </div>
+    </div>
+
+    <div id="map"></div>
+  </body>
+</html>
