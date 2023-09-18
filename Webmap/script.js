@@ -58,8 +58,6 @@ class clycling extends Workout {
     this.speed = this.duration / this.distance;
   }
 }
-// const tes1 = new running([2, 4], 4, 5, 6);
-
 class App {
   #map;
   #mapEvent;
@@ -254,14 +252,6 @@ class App {
     const workout = this.#workouts.find(
       (work) => work.id === workoutEl.dataset.id
     );
-    console.log(workout);
-    // this.#map.setView(workout.coords, 13, {
-    //   animate: true,
-    //   pan: {
-    //     duration: 1,
-    //   },
-    // });
-
     this.#map.setView(workout.coords, 13, {
       animate: true,
       pan: {
@@ -308,14 +298,6 @@ class App {
     i--;
     console.log(i);
   }
-
-  // _testMov(e) {
-  //   e.preventDefault();
-  //   this._sortitem(this.sorty);
-  //   this._setVariable();
-  //   console.log(this.sorty);
-  // }
-
   _sortitem() {
     const type = this.inputValue;
     console.log(type);
@@ -377,15 +359,3 @@ class App {
     this._setInputLocalStorage();
   }
 }
-
-
-// function log(...args) {
-//   // prevent `this` from being boxed into the wrapper object
-//   console.log(this, ...args);
-// }
-// log(1, 2);
-// const boundLog = log.bind("this value", 1, 2);
-// boundLog(2, 4);
-// const boundLog2 = boundLog.bind("new this value", 3, 4);
-// boundLog2(5, 6); // "this value", 1, 2, 3, 4, 5, 6
-
