@@ -359,3 +359,4 @@ class App {
     this._setInputLocalStorage();
   }
 }
+const app = new App();
